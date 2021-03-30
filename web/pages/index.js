@@ -1,11 +1,11 @@
-import { client, urlFor } from '../lib/sanity'
-// import Image from 'next/image'
+import { client } from '../lib/sanity'
+import Image from 'next/image'
 
-// const SITE_URL = 'https://next-image.netlify.app'
+const SITE_URL = 'https://next-image.netlify.app'
 
-// const sanityLoader = ({ src, width, quality }) => {
-//   return `https://${SITE_URL}/${src}?w=${width}&q=${quality || 75}`
-// }
+const sanityLoader = ({ src, width, quality }) => {
+  return `https://${SITE_URL}/${src}?w=${width}&q=${quality || 75}`
+}
 
 export default function ({ movies }) {
   return (
@@ -13,7 +13,7 @@ export default function ({ movies }) {
       {movies.map(({ title, poster }) => (
         <li>
           <figure>
-            {/* <Image
+            <Image
               src={poster}
               alt={title}
               loader={sanityLoader}
@@ -21,8 +21,8 @@ export default function ({ movies }) {
               height="500"
               layout="fixed"
               objectFit="contain"
-            /> */}
-            <img src={urlFor(poster).width(600).height(400)} alt={title} />
+            />
+            {/* <img src={urlFor(poster).width(600).height(400)} alt={title} /> */}
           </figure>
 
           <h2>{title}</h2>
