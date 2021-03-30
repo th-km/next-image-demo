@@ -1,0 +1,19 @@
+# Mac files
+.DS_Store
+
+# Dependency directory
+node_modules/
+
+# Sanity dist folder
+/studio/dist/
+
+# Next files
+/.next/
+/out/
+/web/build
+
+# Environment variable files
+.env*
+
+# Local Netlify folder
+.netlify
