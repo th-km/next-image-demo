@@ -1,10 +1,8 @@
 import { client } from '../lib/sanity'
 import Image from 'next/image'
 
-const SITE_URL = 'https://cdn.sanity.io/images/77hrq62b/production'
-
 const sanityLoader = ({ src, width, quality }) => {
-  return `https://${SITE_URL}/${src}?w=${width}&q=${quality || 75}`
+  return `${src}?w=${width}&q=${quality || 75}`
 }
 
 export default function ({ movies }) {
